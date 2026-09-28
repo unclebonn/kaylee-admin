@@ -30,7 +30,7 @@ jobs:
             npm install
 
             # Reload ứng dụng với PM2
-            pm2 reload kaylee-admin || pm2 start npm --name "kaylee-admin" -- start -- -p 30268
+            pm2 reload kaylee-admin || pm2 start npm --name "kaylee-admin" -- run start
             pm2 save
             
       
