@@ -20,6 +20,11 @@ jobs:
           password: ${{ secrets.VPS_PASSWORD }}
           port: ${{ secrets.VPS_PORT }}
           script: |
+            # Load môi trường NVM / Node / PM2
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            export PATH=$PATH:/usr/local/bin:~/.nvm/versions/node/$(nvm current)/bin
+          
             cd /var/www/kaylee-beauty-admin
 
             # Fetch và checkout code mới nhất từ nhánh dev
