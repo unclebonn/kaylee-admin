@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-camel-50: #f8f2ec;
+  --color-camel-100: #f1e6da;
+  --color-camel-200: #e3cdb5;
+  --color-camel-300: #d6b48f;
+  --color-camel-400: #c89b6a;
+  --color-camel-500: #ba8145;
+  --color-camel-600: #956837;
+  --color-camel-700: #704e29;
+  --color-camel-800: #4a341c;
+  --color-camel-900: #251a0e;
+  --color-camel-950: #1a120a;
+  --font-sans: var(--font-noto-sans), sans-serif;
+  --font-serif: var(--font-noto-serif), Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+}
+:root { color-scheme: light; --background: #f8f2ec; --foreground: #251a0e; --border: #e3cdb5; --ring: #c89b6a; }
+* { box-sizing: border-box; }
+html { background: #f8f2ec; scroll-behavior: smooth; }
+body { margin: 0; background: #f8f2ec; color: #251a0e; font-family: Arial, sans-serif; }
+button, input { font: inherit; }
+.nav-link { position: relative; color: #704e29; font-size: .875rem; transition: color .2s; }
+.nav-link:hover { color: #ba8145; }
+.nav-link::after { content: ''; position: absolute; bottom: -8px; left: 0; height: 1px; width: 0; background: #ba8145; transition: width .2s; }
+.nav-link:hover::after { width: 100%; }
+::selection { background: #d6b48f; color: #251a0e; }
