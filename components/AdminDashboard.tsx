@@ -175,7 +175,7 @@ export default function AdminDashboard({ username }: { username: string }) {
         setBusyId(null)
         return
       }
-      url = data.url
+      url = data.shareUrl ?? ''
     } catch {
       alert('Không thể kết nối máy chủ.')
       setBusyId(null)
